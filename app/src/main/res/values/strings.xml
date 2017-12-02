@@ -8,4 +8,7 @@
     <string name="labelGrauDificuldade">Grau de dificuldade:</string>
     <string name="labelEstado">Estado:</string>
     <string name="btnCadastrar">Cadastrar</string>
+    <string name="activity_cadastrar_tarefa">Cadastrar tarefa</string>
+    <string name="activity_cadastrar_tag">Cadastrar tag</string>
+    <string name="hintNomeTag">Nome</string>
 </resources>

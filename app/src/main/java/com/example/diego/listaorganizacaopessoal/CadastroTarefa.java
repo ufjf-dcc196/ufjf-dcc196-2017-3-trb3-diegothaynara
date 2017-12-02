@@ -18,6 +18,7 @@ public class CadastroTarefa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_tarefa);
 
+
         txtTituloTarefa = (TextView) findViewById(R.id.txtTituloTarefa);
         txtDescricaoTarefa = (TextView) findViewById(R.id.txtDescricaoTarefa);
         spinnerGrauDificuldadeTarefa = (Spinner) findViewById(R.id.spinnerGrauDificuldadeTarefa);
