@@ -10,13 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TagAdapter extends CursorAdapter {
     private ListaTarefasDbHelper listaTarefasHelper;
+    private Context context;
 
     public TagAdapter(Context context, Cursor c) {
         super(context, c, 0);
         listaTarefasHelper = new ListaTarefasDbHelper(context);
+        this.context = context;
     }
 
     @Override
@@ -53,6 +56,12 @@ public class TagAdapter extends CursorAdapter {
             ContentValues values = new ContentValues();
             values.put(ListaTarefasContract.Tag.COLUMN_NAME_NOME, nome);
             long id = db.insert(ListaTarefasContract.Tag.TABLE_NAME, null, values);
+            if(id != -1) {
+                Toast.makeText(this.context, "Tag cadastrada com sucesso", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Toast.makeText(this.context, "Erro ao cadastrar tag", Toast.LENGTH_SHORT).show();
+            }
             atualizar();
         } catch (Exception e) {
             Log.e("LISTA", e.getLocalizedMessage());
