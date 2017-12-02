@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +84,12 @@ public class CadastroTarefa extends AppCompatActivity {
                 String descricao = txtDescricaoTarefa.getText().toString();
                 Integer grauDificuldade = Integer.parseInt(sItems1.getSelectedItem().toString());
                 String estado = sItems2.getSelectedItem().toString();
+
+                // Checa se nenhum dos dois campos está vazio
+                if(titulo.trim().equals("") || descricao.trim().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Dado(s) inválido(s)", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 tarefaAdapter.inserir(titulo, descricao, grauDificuldade, estado);
 
