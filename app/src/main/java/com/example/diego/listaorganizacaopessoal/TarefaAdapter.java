@@ -10,13 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TarefaAdapter extends CursorAdapter {
     private ListaTarefasDbHelper listaTarefasHelper;
+    private Context context;
 
     public TarefaAdapter(Context context, Cursor c) {
         super(context, c, 0);
         listaTarefasHelper = new ListaTarefasDbHelper(context);
+        this.context = context;
     }
 
     @Override
@@ -69,6 +72,12 @@ public class TarefaAdapter extends CursorAdapter {
             values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_DIFICULDADE, grau_dificuldade);
             values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_ESTADO, estado);
             long id = db.insert(ListaTarefasContract.Tarefa.TABLE_NAME, null, values);
+            if(id != 1) {
+                Toast.makeText(this.context, "Tarefa cadastrada com sucesso", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Toast.makeText(this.context, "Erro ao cadastrar tarefa", Toast.LENGTH_SHORT).show();
+            }
             atualizar();
         } catch (Exception e) {
             Log.e("LISTA", e.getLocalizedMessage());
