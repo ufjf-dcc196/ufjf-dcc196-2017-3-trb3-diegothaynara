@@ -67,13 +67,6 @@ public class CadastroTarefa extends AppCompatActivity {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Spinner sItems2 = (Spinner) findViewById(R.id.spinnerEstadoTarefa);
         sItems2.setAdapter(adapter2);
-
-
-
-
-
-
-
     }
 
 

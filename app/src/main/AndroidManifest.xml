@@ -25,6 +25,7 @@
         <activity
             android:name=".VisualizacaoTags"
             android:label="@string/activity_visualizar_tags" />
+        <activity android:name=".layout_tag"></activity>
     </application>
 
 </manifest>
