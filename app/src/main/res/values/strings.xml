@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Lista Organizacao Pessoal</string>
+    <string name="btnCadastrarTarefa">Cadastrar tarefa</string>
+    <string name="btnCadastrarTag">Cadastrar tag</string>
+    <string name="btnVisualizarTags">Tags</string>
 </resources>
