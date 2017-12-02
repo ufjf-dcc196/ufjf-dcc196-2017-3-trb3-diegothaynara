@@ -4,10 +4,10 @@
     <string name="btnCadastrarTag">Cadastrar tag</string>
     <string name="btnVisualizarTags">Tags</string>
     <string name="hintTitulo">Título</string>
-    <string name="titulo">Título</string>
-    <string name="dificuldade">Dificuldade</string>
-    <string name="descricao">Descriçao</string>
-    <string name="estado">Estado</string>
+    <string name="titulo">Título:</string>
+    <string name="dificuldade">Dificuldade:</string>
+    <string name="descricao">Descriçao:</string>
+    <string name="estado">Estado:</string>
     <string name="hintDescricao">Descrição</string>
     <string name="labelGrauDificuldade">Grau de dificuldade:</string>
     <string name="labelEstado">Estado:</string>

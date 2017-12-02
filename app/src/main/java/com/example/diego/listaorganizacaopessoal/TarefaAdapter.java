@@ -50,8 +50,8 @@ public class TarefaAdapter extends CursorAdapter {
                     ListaTarefasContract.Tarefa.COLUMN_NAME_DIFICULDADE,
                     ListaTarefasContract.Tarefa.COLUMN_NAME_ESTADO,
             };
-            // A fazer; Em execução; Bloqueada e Concluída.
-            Cursor c = db.query(ListaTarefasContract.Tarefa.TABLE_NAME, visao, null, null, null, null, null);
+            String sort = ListaTarefasContract.Tarefa.COLUMN_NAME_TITULO + " ASC";
+            Cursor c = db.query(ListaTarefasContract.Tarefa.TABLE_NAME, visao, null, null, null, null, sort);
             this.changeCursor(c);
 
         } catch (Exception e) {
@@ -67,7 +67,7 @@ public class TarefaAdapter extends CursorAdapter {
             values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_TITULO, titulo);
             values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_DESCRICAO, descricao);
             values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_DIFICULDADE, grau_dificuldade);
-            values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_DESCRICAO, estado);
+            values.put(ListaTarefasContract.Tarefa.COLUMN_NAME_ESTADO, estado);
             long id = db.insert(ListaTarefasContract.Tarefa.TABLE_NAME, null, values);
             atualizar();
         } catch (Exception e) {

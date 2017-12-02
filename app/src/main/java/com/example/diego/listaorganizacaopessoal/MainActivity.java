@@ -5,12 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnCadastrarTarefa;
     private Button btnCadastrarTag;
     private Button btnVisualizarTags;
+    private ListView lstTarefas;
+    private TarefaAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,13 @@ public class MainActivity extends AppCompatActivity {
         btnCadastrarTarefa = (Button) findViewById(R.id.btnCadastrarTarefa);
         btnCadastrarTag = (Button) findViewById(R.id.btnCadastrarTag);
         btnVisualizarTags = (Button) findViewById(R.id.btnVisualizarTags);
+        lstTarefas = (ListView) findViewById(R.id.lstTarefas);
+        adapter = new TarefaAdapter(getBaseContext(), null);
 
+
+
+        lstTarefas.setAdapter(adapter);
+        adapter.atualizar();
 
         // Evento para mudar de activity ao clicar no botão de cadastro de tarefa
         btnCadastrarTarefa.setOnClickListener(new View.OnClickListener() {
