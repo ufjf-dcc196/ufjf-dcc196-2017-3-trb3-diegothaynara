@@ -16,10 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadastroTarefa"
-                  android:label="@string/activity_cadastrar_tarefa" />
-        <activity android:name=".CadastroTag"
-                  android:label="@string/activity_cadastrar_tag" />
+        <activity
+            android:name=".CadastroTarefa"
+            android:label="@string/activity_cadastrar_tarefa" />
+        <activity
+            android:name=".CadastroTag"
+            android:label="@string/activity_cadastrar_tag" />
+        <activity
+            android:name=".VisualizacaoTags"
+            android:label="@string/activity_visualizar_tags" />
     </application>
 
 </manifest>

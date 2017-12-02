@@ -39,5 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Evento para mudar de activity ao clicar no botão de visualizar tags
+        btnVisualizarTags.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (MainActivity.this, VisualizacaoTags.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

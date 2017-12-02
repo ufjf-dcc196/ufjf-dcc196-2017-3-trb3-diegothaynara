@@ -10,5 +10,8 @@
     <string name="btnCadastrar">Cadastrar</string>
     <string name="activity_cadastrar_tarefa">Cadastrar tarefa</string>
     <string name="activity_cadastrar_tag">Cadastrar tag</string>
+    <string name="activity_visualizar_tags">Tags</string>
     <string name="hintNomeTag">Nome</string>
+    <string name="labelTarefas">Tarefas:</string>
+    <string name="labelMinhasTags">Minhas tags:</string>
 </resources>
